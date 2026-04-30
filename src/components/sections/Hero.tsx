@@ -97,7 +97,7 @@ export function Hero() {
           </div>
           <div className="absolute -bottom-4 -left-6 glass rounded-2xl px-4 py-3">
             <div className="text-xs text-muted-foreground">Tech Stack</div>
-            <div className="font-display font-semibold">Python · React</div>
+            <div className="font-display font-semibold">Python and java</div>
           </div>
         </motion.div>
       </div>
