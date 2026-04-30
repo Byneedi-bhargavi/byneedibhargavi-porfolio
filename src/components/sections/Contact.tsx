@@ -8,7 +8,7 @@ export function Contact() {
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8">
         <div className="space-y-4">
           {[
-            { icon: Mail, label: "Email", value: "bhargavi@example.com", href: "mailto:bhargavi@example.com" },
+            { icon: Mail, label: "Email", value: "bharubhargavi220@gmail.com", href: "mailto:bharubhargavi220@gmail.com" },
             { icon: MapPin, label: "Location", value: "Chennai, India" },
             { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/bhargavi", href: "#" },
             { icon: Github, label: "GitHub", value: "github.com/bhargavi", href: "#" },
