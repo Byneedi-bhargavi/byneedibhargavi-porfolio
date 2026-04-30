@@ -28,7 +28,7 @@ export function Hero() {
           </div>
 
           <h1 className="font-display font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-5">
-            Hi, I'm <span className="text-gradient">Byneedi Bhargavi</span>
+            Hi, I'm <span className="text-gradient">Bhargavi</span>
           </h1>
           <h2 className="text-xl md:text-2xl text-foreground/90 font-display mb-5">
             Artificial Intelligence & Machine Learning Engineer
@@ -85,7 +85,7 @@ export function Hero() {
           <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] rounded-full glow-ring overflow-hidden animate-float">
             <img
               src={portrait}
-              alt="Byneedi Bhargavi"
+              alt="Bhargavi"
               width={1024}
               height={1024}
               className="w-full h-full object-cover"
