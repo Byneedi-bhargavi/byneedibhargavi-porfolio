@@ -11,7 +11,7 @@ export function Contact() {
             { icon: Mail, label: "Email", value: "bharubhargavi220@gmail.com", href: "mailto:bharubhargavi220@gmail.com" },
             { icon: MapPin, label: "Location", value: "Chennai, India" },
             { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/byneedibhargavi", href: "https://www.linkedin.com/in/byneedibhargavi" },
-            { icon: Github, label: "GitHub", value: "github.com/bhargavi", href: "#" },
+            { icon: Github, label: "GitHub", value: "github.com/Byneedi-bhargavi", href: "https://github.com/Byneedi-bhargavi" },
             { icon: FileDown, label: "Resume", value: "Download PDF", href: "#" },
           ].map((c, i) => (
             <motion.a
