@@ -50,7 +50,7 @@ export function Navbar() {
             <span className="grid place-items-center w-8 h-8 rounded-lg bg-primary/20 text-accent">
               <Sparkles className="w-4 h-4" />
             </span>
-            <span className="text-gradient">Bhargavi</span>
+            <span className="text-gradient">Byneedi Bhargavi</span>
           </a>
           <ul className="hidden lg:flex items-center gap-1">
             {links.map((l) => (
