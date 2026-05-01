@@ -34,6 +34,12 @@ export const Route = createRootRoute({
       { name: "author", content: "Byneedi Bhargavi" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Byneedi Bhargavi — AI & ML Engineer" },
+      { name: "twitter:title", content: "Byneedi Bhargavi — AI & ML Engineer" },
+      { property: "og:description", content: "Portfolio of Byneedi Bhargavi, AIML engineering student & ML developer." },
+      { name: "twitter:description", content: "Portfolio of Byneedi Bhargavi, AIML engineering student & ML developer." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/245636bb-c6f4-4d17-8ada-726757b3c0db/id-preview-355d6d4f--6f51cbc9-5246-42b2-9798-76f407c28296.lovable.app-1777617258102.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/245636bb-c6f4-4d17-8ada-726757b3c0db/id-preview-355d6d4f--6f51cbc9-5246-42b2-9798-76f407c28296.lovable.app-1777617258102.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
