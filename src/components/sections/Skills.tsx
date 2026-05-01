@@ -51,7 +51,7 @@ export function Skills() {
               <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent">
                 <g.icon className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-semibold text-lg">{g.title}</h3>
+              <h3 className="font-display font-semibold text-cyan-400 text-lg">{g.title}</h3>
             </div>
             <div className="space-y-4">
               {g.skills.map((s, i) => (

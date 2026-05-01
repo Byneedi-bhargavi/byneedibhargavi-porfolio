@@ -51,7 +51,7 @@ export function Services() {
               <div className="grid place-items-center w-12 h-12 rounded-xl bg-primary/20 text-accent mb-5 group-hover:scale-110 transition-transform">
                 <s.icon className="w-5 h-5" />
               </div>
-              <h3 className="font-display font-semibold text-xl mb-2">{s.title}</h3>
+              <h3 className="font-display font-semibold text-cyan-400 text-xl mb-2">{s.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
             </div>
           </motion.div>
