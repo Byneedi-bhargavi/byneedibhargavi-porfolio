@@ -93,11 +93,11 @@ export function Hero() {
           </div>
           <div className="absolute -top-2 -right-2 glass rounded-2xl px-4 py-3 animate-pulse-glow">
             <div className="text-xs text-muted-foreground">Focus</div>
-            <div className="font-display font-semibold text-accent">ML Engineer</div>
+            <div className="font-display font-semibold text-cyan-400 text-accent">ML Engineer</div>
           </div>
           <div className="absolute -bottom-4 -left-6 glass rounded-2xl px-4 py-3">
             <div className="text-xs text-muted-foreground">Tech Stack</div>
-            <div className="font-display font-semibold">Python and java</div>
+            <div className="font-display font-semibold text-cyan-400">Python and java</div>
           </div>
         </motion.div>
       </div>

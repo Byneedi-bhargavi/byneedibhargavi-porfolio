@@ -44,7 +44,7 @@ export function About() {
               <div className="mx-auto w-12 h-12 grid place-items-center rounded-xl bg-primary/15 text-accent mb-3">
                 <s.icon className="w-5 h-5" />
               </div>
-              <div className="font-display font-semibold text-sm">{s.label}</div>
+              <div className="font-display font-semibold text-cyan-400 text-sm">{s.label}</div>
             </motion.div>
           ))}
         </div>
