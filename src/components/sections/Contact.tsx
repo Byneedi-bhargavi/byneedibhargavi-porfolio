@@ -3,6 +3,7 @@ import { Mail, MapPin, Github, Linkedin, FileDown, Send, CheckCircle2, AlertCirc
 import { Section } from "../Section";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import resumeAsset from "@/assets/resume.asset.json";
 
 const EMAILJS_SERVICE_ID = "service_b97qqjf";
 const EMAILJS_TEMPLATE_ID = "template_xqmkiis";
