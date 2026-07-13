@@ -15,13 +15,14 @@ export function Footer() {
         </nav>
         <div className="flex md:justify-end gap-3">
           {[
-            { icon: Github, href: "#" },
-            { icon: Linkedin, href: "#" },
-            { icon: Mail, href: "mailto:bhargavi@example.com" },
+            { icon: Github, href: "https://github.com/Byneedi-bhargavi", external: true },
+            { icon: Linkedin, href: "https://linkedin.com/in/byneedibhargavi", external: true },
+            { icon: Mail, href: "#contact", external: false },
           ].map((s, i) => (
             <a
               key={i}
               href={s.href}
+              {...(s.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="grid place-items-center w-10 h-10 rounded-xl glass glass-hover text-muted-foreground hover:text-accent"
             >
               <s.icon className="w-4 h-4" />
