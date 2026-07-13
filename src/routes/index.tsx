@@ -8,6 +8,7 @@ import { Skills } from "@/components/sections/Skills";
 import { Services } from "@/components/sections/Services";
 import { Projects } from "@/components/sections/Projects";
 import { Contact } from "@/components/sections/Contact";
+import { Certifications } from "@/components/sections/Certifications";
 import { Footer } from "@/components/Footer";
 import { FloatingSocials } from "@/components/FloatingSocials";
 
@@ -44,6 +45,7 @@ function Index() {
         <Skills />
         <Services />
         <Projects />
+        <Certifications />
         <Contact />
       </main>
       <Footer />
