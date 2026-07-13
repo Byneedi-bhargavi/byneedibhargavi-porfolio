@@ -1,29 +1,43 @@
 import { motion } from "framer-motion";
-import { Briefcase, Plane } from "lucide-react";
+import { Briefcase, Code2, Plane } from "lucide-react";
 import { Section } from "../Section";
 
 const items = [
   {
     icon: Briefcase,
     role: "Machine Learning Intern",
-    org: "Retech Solutions",
+    org: "Great Minds Technology",
+    duration: "2 Jun 2025 – 30 Jun 2025",
     bullets: [
-      "Worked on real-world Machine Learning projects",
-      "Built predictive models and derived insights from data",
-      "Implemented ML algorithms using Python",
-      "Performed data preprocessing and model evaluation",
-      "Improved understanding of deployment, feature selection, and model building",
+      "Worked on machine learning fundamentals through hands-on projects",
+      "Performed data preprocessing, feature engineering, and model training",
+      "Built end-to-end ML workflows using Python and Scikit-learn",
+      "Evaluated models and generated predictions from real datasets",
+      "Gained practical experience analyzing datasets and interpreting results",
+    ],
+  },
+  {
+    icon: Code2,
+    role: "Web Development Intern",
+    org: "Test Yantra Software Solutions",
+    duration: "27 Feb 2025 – 4 Apr 2025",
+    bullets: [
+      "Developed responsive web applications using HTML, CSS, and JavaScript",
+      "Built reusable UI components with React.js",
+      "Integrated Firebase for authentication and cloud-based data storage",
+      "Implemented responsive layouts following modern web practices",
     ],
   },
   {
     icon: Plane,
-    role: "Intern",
-    org: "Chennai International Airport",
+    role: "Intern – CNS Directorate",
+    org: "Airports Authority of India (AAI), Chennai Airport",
+    duration: "12 Dec 2024 – 30 Dec 2024",
     bullets: [
-      "Gained exposure to operational systems and workflows",
-      "Observed technology-driven airport operations",
-      "Learned practical system processes and data handling",
-      "Improved analytical thinking and adaptability in professional environments",
+      "Gained exposure to Communication, Navigation & Surveillance (CNS) systems",
+      "Studied aviation communication infrastructure and navigation equipment",
+      "Learned surveillance technologies used in airport operations",
+      "Observed operational safety procedures and airport technical systems",
     ],
   },
 ];
@@ -31,7 +45,7 @@ const items = [
 export function Experience() {
   return (
     <Section id="experience" eyebrow="Experience" title="Where I've Worked">
-      <div className="relative grid md:grid-cols-2 gap-6">
+      <div className="relative grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((it, i) => (
           <motion.div
             key={it.org}
@@ -48,6 +62,7 @@ export function Experience() {
               <div>
                 <h3 className="font-display font-bold text-xl">{it.role}</h3>
                 <div className="text-accent text-sm">{it.org}</div>
+                <div className="text-xs font-mono text-muted-foreground mt-1">{it.duration}</div>
               </div>
             </div>
             <ul className="space-y-2.5 text-sm text-muted-foreground">

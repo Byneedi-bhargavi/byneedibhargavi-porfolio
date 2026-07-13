@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
-import { Music, Wine, FlaskConical, Sparkles } from "lucide-react";
+import { Music, Salad, FlaskConical, Sparkles } from "lucide-react";
 import { Section } from "../Section";
 
 const projects = [
+  {
+    icon: Salad,
+    title: "NutriAI – AI-Powered Nutrition Prediction",
+    tag: "Machine Learning",
+    desc: "AI-powered web app that predicts nutritional values and calorie content of food items using ML. Includes an interactive dashboard with nutrition analytics and real-time predictions from a trained model.",
+    stack: ["Java", "HTML5", "CSS3", "JavaScript"],
+  },
   {
     icon: Music,
     title: "Music Web Application",
     tag: "Web Development",
     desc: "Modern music streaming/player web application built with responsive frontend technologies.",
     stack: ["React", "Vite", "Tailwind"],
-  },
-  {
-    icon: Wine,
-    title: "Wine Quality Prediction",
-    tag: "Machine Learning",
-    desc: "ML model that predicts wine quality based on chemical features from a labeled dataset.",
-    stack: ["Python", "scikit-learn", "Pandas"],
   },
   {
     icon: FlaskConical,
