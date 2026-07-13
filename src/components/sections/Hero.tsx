@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, Sparkles } from "lucide-react";
 import { NeuralBackground } from "../NeuralBackground";
 import portrait from "@/assets/bhargavi-portrait.jpg";
+import resumeAsset from "@/assets/resume.asset.json";
 
 export function Hero() {
   return (
@@ -47,7 +48,10 @@ export function Hero() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href="#"
+              href={resumeAsset.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="BHARGAVI_RESUME.pdf"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass glass-hover font-medium"
             >
               <Download className="w-4 h-4" /> Resume

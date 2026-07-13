@@ -3,6 +3,7 @@ import { Mail, MapPin, Github, Linkedin, FileDown, Send, CheckCircle2, AlertCirc
 import { Section } from "../Section";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import resumeAsset from "@/assets/resume.asset.json";
 
 const EMAILJS_SERVICE_ID = "service_b97qqjf";
 const EMAILJS_TEMPLATE_ID = "template_xqmkiis";
@@ -42,7 +43,7 @@ export function Contact() {
             { icon: MapPin, label: "Location", value: "Chennai, India" },
             { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/byneedibhargavi", href: "https://www.linkedin.com/in/byneedibhargavi" },
             { icon: Github, label: "GitHub", value: "github.com/Byneedi-bhargavi", href: "https://github.com/Byneedi-bhargavi" },
-            { icon: FileDown, label: "Resume", value: "Download PDF", href: "https://collection.cloudinary.com/ddmbsfuqi/9a0dd2b85d067f458df3d7c4611cc28d" },
+            { icon: FileDown, label: "Resume", value: "Download PDF", href: resumeAsset.url },
           ].map((c, i) => (
             <motion.a
               key={c.label}
