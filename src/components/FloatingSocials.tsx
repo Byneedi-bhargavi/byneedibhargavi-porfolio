@@ -4,8 +4,15 @@ export function FloatingSocials() {
   return (
     <div className="fixed left-4 bottom-6 z-40 hidden md:flex flex-col gap-3">
       {[
-        { icon: Github, href: "#", label: "GitHub" },
-        { icon: Linkedin, href: "#", label: "LinkedIn" },
+        { icon: Github, href: "https://github.com/Byneedi-bhargavi", label: "GitHub" },
+        { icon: Linkedin, href: "https://linkedin.com/in/byneedibhargavi", label: "LinkedIn" },
+      ].map((s) => (
+        // eslint-disable-next-line
+        <></>
+      ))}
+      {[
+        { icon: Github, href: "https://github.com/Byneedi-bhargavi", label: "GitHub" },
+        { icon: Linkedin, href: "https://linkedin.com/in/byneedibhargavi", label: "LinkedIn" },
       ].map((s) => (
         <a
           key={s.label}
