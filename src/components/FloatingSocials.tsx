@@ -7,16 +7,11 @@ export function FloatingSocials() {
         { icon: Github, href: "https://github.com/Byneedi-bhargavi", label: "GitHub" },
         { icon: Linkedin, href: "https://linkedin.com/in/byneedibhargavi", label: "LinkedIn" },
       ].map((s) => (
-        // eslint-disable-next-line
-        <></>
-      ))}
-      {[
-        { icon: Github, href: "https://github.com/Byneedi-bhargavi", label: "GitHub" },
-        { icon: Linkedin, href: "https://linkedin.com/in/byneedibhargavi", label: "LinkedIn" },
-      ].map((s) => (
         <a
           key={s.label}
           href={s.href}
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label={s.label}
           className="grid place-items-center w-11 h-11 rounded-xl glass glass-hover text-muted-foreground hover:text-accent"
         >
