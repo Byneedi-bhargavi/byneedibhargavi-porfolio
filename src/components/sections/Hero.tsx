@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, Sparkles } from "lucide-react";
 import { NeuralBackground } from "../NeuralBackground";
 import portrait from "@/assets/bhargavi-portrait.jpg";
+import resumeAsset from "@/assets/resume.asset.json";
 
 export function Hero() {
   return (
