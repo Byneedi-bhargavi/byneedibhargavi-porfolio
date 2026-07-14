@@ -7,7 +7,7 @@ const items = [
     icon: Briefcase,
     role: "Machine Learning Intern",
     org: "Great Minds Technology",
-    duration: "2 Jun – 30 Jun",
+    duration: "2 Jun 2025 – 30 Jun 2025",
     bullets: [
       "Worked on machine learning fundamentals through hands-on projects",
       "Performed data preprocessing, feature engineering, and model training",
