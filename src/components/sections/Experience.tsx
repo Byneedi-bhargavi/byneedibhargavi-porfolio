@@ -44,7 +44,7 @@ const items = [
 
 export function Experience() {
   return (
-    <Section id="experience" eyebrow="Experience" title="Where I've Worked">
+    <Section id="experience" eyebrow="Internships" title="Internships">
       <div className="relative grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.map((it, i) => (
           <motion.div
