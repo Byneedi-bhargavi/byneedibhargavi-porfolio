@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -8,20 +8,38 @@ export function Footer() {
           <span className="text-gradient">Byneedi Bhargavi</span>
         </div>
         <nav className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-muted-foreground">
-          <a href="#about" className="hover:text-accent transition-colors">About</a>
-          <a href="#skills" className="hover:text-accent transition-colors">Skills</a>
-          <a href="#projects" className="hover:text-accent transition-colors">Projects</a>
-          <a href="#contact" className="hover:text-accent transition-colors">Contact</a>
+          <a href="#about" className="hover:text-accent transition-colors">
+            About
+          </a>
+          <a href="#skills" className="hover:text-accent transition-colors">
+            Skills
+          </a>
+          <a href="#projects" className="hover:text-accent transition-colors">
+            Projects
+          </a>
+          <a href="#contact" className="hover:text-accent transition-colors">
+            Contact
+          </a>
         </nav>
         <div className="flex md:justify-end gap-3">
           {[
-            { icon: Github, href: "https://github.com/Byneedi-bhargavi", external: true },
-            { icon: Linkedin, href: "https://linkedin.com/in/byneedibhargavi", external: true },
-            { icon: Mail, href: "#contact", external: false },
+            {
+              icon: Linkedin,
+              href: "https://www.linkedin.com/in/byneedibhargavi",
+              label: "LinkedIn",
+              external: true,
+            },
+            {
+              icon: Mail,
+              href: "mailto:bharubhargavi220@gmail.com",
+              label: "Email",
+              external: false,
+            },
           ].map((s, i) => (
             <a
               key={i}
               href={s.href}
+              aria-label={s.label}
               {...(s.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="grid place-items-center w-10 h-10 rounded-xl glass glass-hover text-muted-foreground hover:text-accent"
             >

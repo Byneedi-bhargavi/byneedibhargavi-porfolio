@@ -16,7 +16,7 @@ const groups = [
     icon: Code2,
     title: "Programming",
     skills: [
-      { name: "Python", level: 90 },
+      { name: "Python Fundamentals", level: null },
       { name: "Java", level: 82 },
       { name: "Data Structures & Algorithms", level: 85 },
     ],
@@ -58,18 +58,22 @@ export function Skills() {
                 <div key={s.name}>
                   <div className="flex justify-between text-sm mb-1.5">
                     <span>{s.name}</span>
-                    <span className="text-accent font-mono text-xs">{s.level}%</span>
+                    {s.level !== null && (
+                      <span className="text-accent font-mono text-xs">{s.level}%</span>
+                    )}
                   </div>
-                  <div className="h-1.5 rounded-full bg-muted overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${s.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.2 + i * 0.08, ease: "easeOut" }}
-                      className="h-full rounded-full"
-                      style={{ background: "var(--gradient-hero)" }}
-                    />
-                  </div>
+                  {s.level !== null && (
+                    <div className="h-1.5 rounded-full bg-muted overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${s.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.2 + i * 0.08, ease: "easeOut" }}
+                        className="h-full rounded-full"
+                        style={{ background: "var(--gradient-hero)" }}
+                      />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
