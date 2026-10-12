@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, Sparkles } from "lucide-react";
 import { NeuralBackground } from "../NeuralBackground";
 import portrait from "@/assets/bhargavi-portrait.jpg";
-import resumeAsset from "@/assets/resume.asset.json";
 
 export function Hero() {
   return (
@@ -48,33 +47,11 @@ export function Hero() {
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
-              href={resumeAsset.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              download="BHARGAVI_RESUME.pdf"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl glass glass-hover font-medium"
-            >
-              <Download className="w-4 h-4" /> Resume
-            </a>
-            <a
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-accent/40 text-accent font-medium hover:bg-accent/10 transition-all"
             >
               <Mail className="w-4 h-4" /> Contact Me
             </a>
-          </div>
-
-          <div className="mt-10 grid grid-cols-3 gap-6 max-w-md">
-            {[
-              { k: "3rd", v: "Year B.Tech" },
-              { k: "2+", v: "Internships" },
-              { k: "10+", v: "Projects" },
-            ].map((s) => (
-              <div key={s.v}>
-                <div className="text-3xl font-display font-bold text-gradient">{s.k}</div>
-                <div className="text-xs text-muted-foreground mt-1">{s.v}</div>
-              </div>
-            ))}
           </div>
         </motion.div>
 
