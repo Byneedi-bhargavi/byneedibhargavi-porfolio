@@ -6,7 +6,7 @@ const education = [
   {
     title: "B.Tech in Artificial Intelligence and Machine Learning",
     place: "Panimalar Engineering College",
-    detail: "CGPA: 8.02 / 10  •  3rd Year",
+    detail: "CGPA: 8.02 / 10",
   },
   {
     title: "Higher Secondary (State Board)",

@@ -1,4 +1,3 @@
-import { Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -21,32 +20,6 @@ export function Footer() {
             Contact
           </a>
         </nav>
-        <div className="flex md:justify-end gap-3">
-          {[
-            {
-              icon: Linkedin,
-              href: "https://www.linkedin.com/in/byneedibhargavi",
-              label: "LinkedIn",
-              external: true,
-            },
-            {
-              icon: Mail,
-              href: "mailto:bharubhargavi220@gmail.com",
-              label: "Email",
-              external: false,
-            },
-          ].map((s, i) => (
-            <a
-              key={i}
-              href={s.href}
-              aria-label={s.label}
-              {...(s.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-              className="grid place-items-center w-10 h-10 rounded-xl glass glass-hover text-muted-foreground hover:text-accent"
-            >
-              <s.icon className="w-4 h-4" />
-            </a>
-          ))}
-        </div>
       </div>
       <div className="text-center text-xs text-muted-foreground pb-6">
         © {new Date().getFullYear()} Byneedi Bhargavi. Crafted with intelligence & code.
