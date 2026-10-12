@@ -58,18 +58,22 @@ export function Skills() {
                 <div key={s.name}>
                   <div className="flex justify-between text-sm mb-1.5">
                     <span>{s.name}</span>
-                    {s.level !== null && <span className="text-accent font-mono text-xs">{s.level}%</span>}
+                    {s.level !== null && (
+                      <span className="text-accent font-mono text-xs">{s.level}%</span>
+                    )}
                   </div>
-                  {s.level !== null && <div className="h-1.5 rounded-full bg-muted overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${s.level}%` }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.2 + i * 0.08, ease: "easeOut" }}
-                      className="h-full rounded-full"
-                      style={{ background: "var(--gradient-hero)" }}
-                    />
-                  </div>}
+                  {s.level !== null && (
+                    <div className="h-1.5 rounded-full bg-muted overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${s.level}%` }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, delay: 0.2 + i * 0.08, ease: "easeOut" }}
+                        className="h-full rounded-full"
+                        style={{ background: "var(--gradient-hero)" }}
+                      />
+                    </div>
+                  )}
                 </div>
               ))}
             </div>

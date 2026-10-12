@@ -30,14 +30,23 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Byneedi Bhargavi — AI & ML Engineer" },
-      { name: "description", content: "Portfolio of Byneedi Bhargavi, AIML engineering student & ML developer." },
+      {
+        name: "description",
+        content: "Portfolio of Byneedi Bhargavi, AIML engineering student & ML developer.",
+      },
       { name: "author", content: "Byneedi Bhargavi" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { property: "og:title", content: "Byneedi Bhargavi — AI & ML Engineer" },
       { name: "twitter:title", content: "Byneedi Bhargavi — AI & ML Engineer" },
-      { property: "og:description", content: "Portfolio of Byneedi Bhargavi, AIML engineering student & ML developer." },
-      { name: "twitter:description", content: "Portfolio of Byneedi Bhargavi, AIML engineering student & ML developer." },
+      {
+        property: "og:description",
+        content: "Portfolio of Byneedi Bhargavi, AIML engineering student & ML developer.",
+      },
+      {
+        name: "twitter:description",
+        content: "Portfolio of Byneedi Bhargavi, AIML engineering student & ML developer.",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

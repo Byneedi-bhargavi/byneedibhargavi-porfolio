@@ -41,9 +41,7 @@ export function Projects() {
               </span>
             </div>
             <h3 className="font-display font-bold text-2xl mb-2">{p.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-              {p.desc}
-            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed mb-5">{p.desc}</p>
             <div className="flex flex-wrap gap-2">
               {p.stack.map((t) => (
                 <span

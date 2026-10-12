@@ -1,5 +1,14 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Linkedin, FileDown, Eye, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import {
+  Mail,
+  MapPin,
+  Linkedin,
+  FileDown,
+  Eye,
+  Send,
+  CheckCircle2,
+  AlertCircle,
+} from "lucide-react";
 import { Section } from "../Section";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
@@ -19,12 +28,9 @@ export function Contact() {
     if (!formRef.current) return;
     setStatus("sending");
     try {
-      await emailjs.sendForm(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        { publicKey: EMAILJS_PUBLIC_KEY }
-      );
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      });
       setStatus("success");
       formRef.current.reset();
       setTimeout(() => setStatus("idle"), 4000);
@@ -40,9 +46,19 @@ export function Contact() {
       <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8">
         <div className="space-y-4">
           {[
-            { icon: Mail, label: "Email", value: "bharubhargavi220@gmail.com", href: "mailto:bharubhargavi220@gmail.com" },
+            {
+              icon: Mail,
+              label: "Email",
+              value: "bharubhargavi220@gmail.com",
+              href: "mailto:bharubhargavi220@gmail.com",
+            },
             { icon: MapPin, label: "Location", value: "Chennai, India" },
-            { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/byneedibhargavi", href: "https://www.linkedin.com/in/byneedibhargavi" },
+            {
+              icon: Linkedin,
+              label: "LinkedIn",
+              value: "linkedin.com/in/byneedibhargavi",
+              href: "https://www.linkedin.com/in/byneedibhargavi",
+            },
           ].map((c, i) => (
             <motion.div
               key={c.label}
@@ -52,28 +68,61 @@ export function Contact() {
               transition={{ duration: 0.4, delay: i * 0.06 }}
               className="glass glass-hover rounded-2xl p-4"
             >
-              {c.href ? <a href={c.href} {...(c.label === "LinkedIn" ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="flex items-center gap-4">
-              <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent">
-                <c.icon className="w-5 h-5" />
-              </div>
-              <div>
-                <div className="text-xs text-muted-foreground">{c.label}</div>
-                <div className="font-medium break-all">{c.value}</div>
-              </div>
-              </a> : <div className="flex items-center gap-4">
-                <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent"><c.icon className="w-5 h-5" /></div>
-                <div><div className="text-xs text-muted-foreground">{c.label}</div><div className="font-medium">{c.value}</div></div>
-              </div>}
+              {c.href ? (
+                <a
+                  href={c.href}
+                  {...(c.label === "LinkedIn"
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  className="flex items-center gap-4"
+                >
+                  <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent">
+                    <c.icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-muted-foreground">{c.label}</div>
+                    <div className="font-medium break-all">{c.value}</div>
+                  </div>
+                </a>
+              ) : (
+                <div className="flex items-center gap-4">
+                  <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent">
+                    <c.icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-muted-foreground">{c.label}</div>
+                    <div className="font-medium">{c.value}</div>
+                  </div>
+                </div>
+              )}
             </motion.div>
           ))}
-          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.18 }} className="glass rounded-2xl p-4">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: 0.18 }}
+            className="glass rounded-2xl p-4"
+          >
             <div className="flex items-center gap-4 mb-4">
-              <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent"><FileDown className="w-5 h-5" /></div>
+              <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent">
+                <FileDown className="w-5 h-5" />
+              </div>
               <div className="font-medium">Resume</div>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Button asChild variant="secondary"><a href={resumeAsset.url} target="_blank" rel="noopener noreferrer"><Eye />View Resume</a></Button>
-              <Button asChild><a href={resumeAsset.url} download={resumeAsset.original_filename}><FileDown />Download Resume</a></Button>
+              <Button asChild variant="secondary">
+                <a href={resumeAsset.url} target="_blank" rel="noopener noreferrer">
+                  <Eye />
+                  View Resume
+                </a>
+              </Button>
+              <Button asChild>
+                <a href={resumeAsset.url} download={resumeAsset.original_filename}>
+                  <FileDown />
+                  Download Resume
+                </a>
+              </Button>
             </div>
           </motion.div>
         </div>
@@ -93,7 +142,9 @@ export function Contact() {
           </div>
           <Field label="Subject" id="subject" name="subject" required />
           <div>
-            <label htmlFor="msg" className="block text-sm text-muted-foreground mb-1.5">Message</label>
+            <label htmlFor="msg" className="block text-sm text-muted-foreground mb-1.5">
+              Message
+            </label>
             <textarea
               id="msg"
               name="message"
@@ -143,7 +194,9 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="block text-sm text-muted-foreground mb-1.5">{label}</label>
+      <label htmlFor={id} className="block text-sm text-muted-foreground mb-1.5">
+        {label}
+      </label>
       <input
         id={id}
         name={name}

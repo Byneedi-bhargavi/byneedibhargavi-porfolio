@@ -40,9 +40,7 @@ export function Certifications() {
                 <BadgeCheck className="w-3.5 h-3.5" />
                 {c.issuer}
               </div>
-              <h3 className="font-display font-semibold text-base leading-snug">
-                {c.title}
-              </h3>
+              <h3 className="font-display font-semibold text-base leading-snug">{c.title}</h3>
             </div>
           </motion.div>
         ))}
