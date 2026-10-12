@@ -10,8 +10,8 @@ const services = [
   },
   {
     icon: Code,
-    title: "Python & Java Development",
-    desc: "Scalable software development and efficient backend / problem-solving applications.",
+    title: "Java Development",
+    desc: "Java programming and problem-solving applications.",
   },
   {
     icon: Globe,

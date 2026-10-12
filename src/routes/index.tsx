@@ -22,6 +22,8 @@ export const Route = createFileRoute("/")({
           "Portfolio of Byneedi Bhargavi — AIML engineering student passionate about Machine Learning, data-driven solutions, and intelligent application development.",
       },
       { property: "og:title", content: "Byneedi Bhargavi — AI & ML Engineer" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       {
         property: "og:description",
         content:

@@ -11,7 +11,6 @@ const items = [
     bullets: [
       "Worked on machine learning fundamentals through hands-on projects",
       "Performed data preprocessing, feature engineering, and model training",
-      "Built end-to-end ML workflows using Python and Scikit-learn",
       "Evaluated models and generated predictions from real datasets",
       "Gained practical experience analyzing datasets and interpreting results",
     ],

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   return (
@@ -15,13 +15,13 @@ export function Footer() {
         </nav>
         <div className="flex md:justify-end gap-3">
           {[
-            { icon: Github, href: "https://github.com/Byneedi-bhargavi", external: true },
-            { icon: Linkedin, href: "https://linkedin.com/in/byneedibhargavi", external: true },
-            { icon: Mail, href: "#contact", external: false },
+            { icon: Linkedin, href: "https://www.linkedin.com/in/byneedibhargavi", label: "LinkedIn", external: true },
+            { icon: Mail, href: "mailto:bharubhargavi220@gmail.com", label: "Email", external: false },
           ].map((s, i) => (
             <a
               key={i}
               href={s.href}
+              aria-label={s.label}
               {...(s.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="grid place-items-center w-10 h-10 rounded-xl glass glass-hover text-muted-foreground hover:text-accent"
             >

@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Github, Linkedin, FileDown, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Mail, MapPin, Linkedin, FileDown, Eye, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { Section } from "../Section";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import resumeAsset from "@/assets/resume.asset.json";
+import { Button } from "@/components/ui/button";
 
 const EMAILJS_SERVICE_ID = "service_b97qqjf";
 const EMAILJS_TEMPLATE_ID = "template_xqmkiis";
@@ -42,27 +43,39 @@ export function Contact() {
             { icon: Mail, label: "Email", value: "bharubhargavi220@gmail.com", href: "mailto:bharubhargavi220@gmail.com" },
             { icon: MapPin, label: "Location", value: "Chennai, India" },
             { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/byneedibhargavi", href: "https://www.linkedin.com/in/byneedibhargavi" },
-            { icon: Github, label: "GitHub", value: "github.com/Byneedi-bhargavi", href: "https://github.com/Byneedi-bhargavi" },
-            { icon: FileDown, label: "Resume", value: "Download PDF", href: resumeAsset.url },
           ].map((c, i) => (
-            <motion.a
+            <motion.div
               key={c.label}
-              href={c.href ?? "#"}
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: i * 0.06 }}
-              className="flex items-center gap-4 glass glass-hover rounded-2xl p-4"
+              className="glass glass-hover rounded-2xl p-4"
             >
+              {c.href ? <a href={c.href} {...(c.label === "LinkedIn" ? { target: "_blank", rel: "noopener noreferrer" } : {})} className="flex items-center gap-4">
               <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent">
                 <c.icon className="w-5 h-5" />
               </div>
               <div>
                 <div className="text-xs text-muted-foreground">{c.label}</div>
-                <div className="font-medium">{c.value}</div>
+                <div className="font-medium break-all">{c.value}</div>
               </div>
-            </motion.a>
+              </a> : <div className="flex items-center gap-4">
+                <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent"><c.icon className="w-5 h-5" /></div>
+                <div><div className="text-xs text-muted-foreground">{c.label}</div><div className="font-medium">{c.value}</div></div>
+              </div>}
+            </motion.div>
           ))}
+          <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.18 }} className="glass rounded-2xl p-4">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="grid place-items-center w-11 h-11 rounded-xl bg-primary/20 text-accent"><FileDown className="w-5 h-5" /></div>
+              <div className="font-medium">Resume</div>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              <Button asChild variant="secondary"><a href={resumeAsset.url} target="_blank" rel="noopener noreferrer"><Eye />View Resume</a></Button>
+              <Button asChild><a href={resumeAsset.url} download={resumeAsset.original_filename}><FileDown />Download Resume</a></Button>
+            </div>
+          </motion.div>
         </div>
 
         <motion.form

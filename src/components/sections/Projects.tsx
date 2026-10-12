@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Music, Salad, FlaskConical, Sparkles } from "lucide-react";
+import { Music, Salad } from "lucide-react";
 import { Section } from "../Section";
 
 const projects = [
@@ -16,20 +16,6 @@ const projects = [
     tag: "Web Development",
     desc: "Modern music streaming/player web application built with responsive frontend technologies.",
     stack: ["React", "Vite", "Tailwind"],
-  },
-  {
-    icon: FlaskConical,
-    title: "ML Mini Projects",
-    tag: "Experiments",
-    desc: "A growing collection of bite-sized ML experiments — classification, regression, EDA.",
-    stack: ["Python", "NumPy", "Matplotlib"],
-  },
-  {
-    icon: Sparkles,
-    title: "Coming Soon",
-    tag: "In Development",
-    desc: "Next-gen project in progress. Stay tuned for an intelligent application built end-to-end.",
-    stack: ["TBD"],
   },
 ];
 

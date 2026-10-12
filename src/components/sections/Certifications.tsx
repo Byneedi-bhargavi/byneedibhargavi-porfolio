@@ -7,7 +7,6 @@ const certifications = [
     title: "Oracle Cloud Infrastructure (OCI) Generative AI Professional",
     issuer: "Oracle",
   },
-  { title: "Python", issuer: "NASSCOM" },
   { title: "SQL", issuer: "NASSCOM" },
   { title: "Data Structures & Algorithms (DSA)", issuer: "NASSCOM" },
   { title: "Acquiring Data", issuer: "NASSCOM" },
